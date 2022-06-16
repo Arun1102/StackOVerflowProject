@@ -10,7 +10,7 @@ namespace StackOverflow.Repositories
         void InsertCategories(Category ci);
         void UpdateCategories(Category cu);
         List<Category> GetCategories();
-        List<Category> GetCategoriesByID(int cid);
+        List<Category> GetCategoriesByCategoryID(int cid);
         void DeleteCategory( int dc);
     }
     public class CategoriesRepository:ICategoriesRepository
@@ -34,8 +34,9 @@ namespace StackOverflow.Repositories
             if (ci != null)
             {
                 ci.CategoryName = cu.CategoryName;
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            
         }
 
         public List<Category> GetCategories()
@@ -44,7 +45,7 @@ namespace StackOverflow.Repositories
             return list;
         }
 
-        public List<Category> GetCategoriesByID(int cid)
+        public List<Category> GetCategoriesByCategoryID(int cid)
         {
             List<Category> li = db.Category.Where(temp=> temp.CategoryID == cid).ToList();
             return li;
@@ -56,11 +57,12 @@ namespace StackOverflow.Repositories
             if (du != null)
             {
                 db.Category.Remove(du);
+                db.SaveChanges();
             }
 
             
 
-            db.SaveChanges();
+            
 
         }
 

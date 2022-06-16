@@ -36,11 +36,12 @@ namespace StackOverflow.Repositories
           Users ui =  db.Users.Where(temp=>temp.UserID == u.UserID).FirstOrDefault();
           if (ui != null)
             {
-                ui.Email = u.Email;
+                
                 ui.Name = u.Name;
                 ui.Mobile = u.Mobile;
+                db.SaveChanges();
             }
-          db.SaveChanges();
+          
         }
 
         public void UpdateUsersPassword(Users u)
@@ -49,9 +50,9 @@ namespace StackOverflow.Repositories
             if (ui != null)
             {
                ui.PasswordHash = u.PasswordHash;
-
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            
         }
 
         public void DeleteUsers(int uid)
@@ -60,9 +61,9 @@ namespace StackOverflow.Repositories
             if (ui != null)
             {
                 db.Users.Remove(ui);
-
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            
         }
 
         public List<Users> GetUsers()
@@ -73,7 +74,7 @@ namespace StackOverflow.Repositories
 
         public List<Users> GetUsersByEmailAndPassword(string email, string password)
         {
-            List<Users> ui = db.Users.Where(temp => temp.Email == email || temp.PasswordHash == password).ToList();
+            List<Users> ui = db.Users.Where(temp => temp.Email == email && temp.PasswordHash == password).ToList();
             return ui;
         }
 

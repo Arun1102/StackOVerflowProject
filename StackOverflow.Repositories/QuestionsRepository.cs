@@ -9,9 +9,9 @@ namespace StackOverflow.Repositories
     {
         void AddQuestion(Question que);
         void UpdateQuestionDetails(Question que);
-        void UpdateQuestionVotesCount(Question que);
-        void UpdateQuestionAnswerCount(Question que);
-        void UpdateQuestionViewCount(Question que);
+        void UpdateQuestionVotesCount(int qid, int value);
+        void UpdateQuestionAnswerCount(int que, int value);
+        void UpdateQuestionViewCount(int que, int value);
         void DeleteQuestion(int que);
         List<Question> GetAllQuestions();
         List<Question> GetQuestionsByQuestionID(int que);
@@ -19,9 +19,12 @@ namespace StackOverflow.Repositories
     public class QuestionsRepository:IQuestionRepository
     {
         StackOverflowDatabaseDBContext db;
+        IQuestionRepository qr;
+        IVotesRepository vr;
         public QuestionsRepository()
         {
             db = new StackOverflowDatabaseDBContext();
+            
         }
 
         public void AddQuestion(Question que)
@@ -36,42 +39,47 @@ namespace StackOverflow.Repositories
             if(ques != null)
             {
                 ques.QuestionName = que.QuestionName;
-
+                ques.QuestionDateAndTime = que.QuestionDateAndTime;
+                ques.CategoryID = que.CategoryID;
+                db.SaveChanges();
             }
-            db.SaveChanges();
+            
         }
 
-        public void UpdateQuestionVotesCount(Question que)
+        public void UpdateQuestionVotesCount(int qid, int value)
         {
-           Question ques =  db.Question.Where(temp=>temp.VotesCount == que.VotesCount).FirstOrDefault();
+           Question ques =  db.Question.Where(temp=>temp.VotesCount == qid).FirstOrDefault();
             if (ques != null)
             {
-                ques.VotesCount = que.VotesCount + 1;
+                ques.VotesCount += value;
+                db.SaveChanges();
+               
                 
             }
-            db.SaveChanges();
+            
         }
 
-        public void UpdateQuestionAnswerCount(Question que)
+        public void UpdateQuestionAnswerCount(int que, int value)
         {
-            Question ques = db.Question.Where(temp => temp.AnswerCount == que.AnswerCount).FirstOrDefault();
+            Question ques = db.Question.Where(temp => temp.AnswerCount == que).FirstOrDefault();
             if (ques != null)
             {
-                ques.AnswerCount = que.AnswerCount + 1;
-
+                ques.AnswerCount += value;
+                db.SaveChanges();
+                
             }
-            db.SaveChanges();
+           
         }
 
-        public void UpdateQuestionViewCount(Question que)
+        public void UpdateQuestionViewCount(int que, int value)
         {
-            Question ques = db.Question.Where(temp => temp.ViewCount == que.ViewCount).FirstOrDefault();
+            Question ques = db.Question.Where(temp => temp.ViewCount == que).FirstOrDefault();
             if (ques != null)
             {
-                ques.ViewCount = que.ViewCount + 1;
-
+                ques.ViewCount += value;
+                db.SaveChanges();
             }
-            db.SaveChanges();
+           
         }
 
         public void DeleteQuestion(int que)
