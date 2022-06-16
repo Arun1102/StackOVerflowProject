@@ -5,7 +5,7 @@ using StackOverflow.DomainModels;
 
 namespace StackOverflow.Repositories
 {
-    public interface ICategories
+    public interface ICategoriesRepository
     {
         void InsertCategories(Category ci);
         void UpdateCategories(Category cu);
@@ -13,7 +13,7 @@ namespace StackOverflow.Repositories
         List<Category> GetCategoriesByID(int cid);
         void DeleteCategory( int dc);
     }
-    public class CategoriesRepository
+    public class CategoriesRepository:ICategoriesRepository
     {
         StackOverflowDatabaseDBContext db;
 

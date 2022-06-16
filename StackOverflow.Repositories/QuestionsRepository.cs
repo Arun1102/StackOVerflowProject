@@ -10,13 +10,13 @@ namespace StackOverflow.Repositories
         void AddQuestion(Question que);
         void UpdateQuestionDetails(Question que);
         void UpdateQuestionVotesCount(Question que);
-        void UpdateQuestionAnswerCount(int que);
-        void UpdateQuestionViewCount(int que);
+        void UpdateQuestionAnswerCount(Question que);
+        void UpdateQuestionViewCount(Question que);
         void DeleteQuestion(int que);
         List<Question> GetAllQuestions();
         List<Question> GetQuestionsByQuestionID(int que);
     }
-    public class QuestionsRepository
+    public class QuestionsRepository:IQuestionRepository
     {
         StackOverflowDatabaseDBContext db;
         public QuestionsRepository()
@@ -52,7 +52,7 @@ namespace StackOverflow.Repositories
             db.SaveChanges();
         }
 
-        public void UpdateAnswerViewCount(Question que)
+        public void UpdateQuestionAnswerCount(Question que)
         {
             Question ques = db.Question.Where(temp => temp.AnswerCount == que.AnswerCount).FirstOrDefault();
             if (ques != null)

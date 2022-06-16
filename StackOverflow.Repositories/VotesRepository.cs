@@ -9,7 +9,7 @@ namespace StackOverflow.Repositories
     {
         void UpdateVotes(Votes vo);
     }
-    public class VotesRepository
+    public class VotesRepository:IVotesRepository
     {
         StackOverflowDatabaseDBContext db;
         public VotesRepository()
