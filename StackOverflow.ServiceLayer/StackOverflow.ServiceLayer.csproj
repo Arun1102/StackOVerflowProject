@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\StackOverflow.DomainModels\StackOverflow.DomainModels.csproj" />
+    <ProjectReference Include="..\StackOverflow.Repositories\StackOverflow.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

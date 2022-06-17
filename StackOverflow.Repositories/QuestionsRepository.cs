@@ -19,8 +19,7 @@ namespace StackOverflow.Repositories
     public class QuestionsRepository:IQuestionRepository
     {
         StackOverflowDatabaseDBContext db;
-        IQuestionRepository qr;
-        IVotesRepository vr;
+        
         public QuestionsRepository()
         {
             db = new StackOverflowDatabaseDBContext();
@@ -48,7 +47,7 @@ namespace StackOverflow.Repositories
 
         public void UpdateQuestionVotesCount(int qid, int value)
         {
-           Question ques =  db.Question.Where(temp=>temp.VotesCount == qid).FirstOrDefault();
+           Question ques =  db.Question.Where(temp=>temp.QuestionID == qid).FirstOrDefault();
             if (ques != null)
             {
                 ques.VotesCount += value;
@@ -61,7 +60,7 @@ namespace StackOverflow.Repositories
 
         public void UpdateQuestionAnswerCount(int que, int value)
         {
-            Question ques = db.Question.Where(temp => temp.AnswerCount == que).FirstOrDefault();
+            Question ques = db.Question.Where(temp => temp.QuestionID == que).FirstOrDefault();
             if (ques != null)
             {
                 ques.AnswerCount += value;
@@ -73,7 +72,7 @@ namespace StackOverflow.Repositories
 
         public void UpdateQuestionViewCount(int que, int value)
         {
-            Question ques = db.Question.Where(temp => temp.ViewCount == que).FirstOrDefault();
+            Question ques = db.Question.Where(temp => temp.QuestionID == que).FirstOrDefault();
             if (ques != null)
             {
                 ques.ViewCount += value;

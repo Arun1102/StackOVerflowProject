@@ -292,6 +292,20 @@
         "runtime": {
           "bin/placeholder/StackOverflow.DomainModels.dll": {}
         }
+      },
+      "StackOverflow.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "StackOverflow.DomainModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StackOverflow.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StackOverflow.Repositories.dll": {}
+        }
       }
     }
   },
@@ -1035,11 +1049,17 @@
       "type": "project",
       "path": "../StackOverflow.DomainModels/StackOverflow.DomainModels.csproj",
       "msbuildProject": "../StackOverflow.DomainModels/StackOverflow.DomainModels.csproj"
+    },
+    "StackOverflow.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../StackOverflow.Repositories/StackOverflow.Repositories.csproj",
+      "msbuildProject": "../StackOverflow.Repositories/StackOverflow.Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "StackOverflow.DomainModels >= 1.0.0"
+      "StackOverflow.DomainModels >= 1.0.0",
+      "StackOverflow.Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1076,6 +1096,9 @@
           "projectReferences": {
             "C:\\Users\\aruna\\Downloads\\stackoverflow-main\\stackoverflow-main\\StackOverflow.DomainModels\\StackOverflow.DomainModels.csproj": {
               "projectPath": "C:\\Users\\aruna\\Downloads\\stackoverflow-main\\stackoverflow-main\\StackOverflow.DomainModels\\StackOverflow.DomainModels.csproj"
+            },
+            "C:\\Users\\aruna\\Downloads\\stackoverflow-main\\stackoverflow-main\\StackOverflow.Repositories\\StackOverflow.Repositories.csproj": {
+              "projectPath": "C:\\Users\\aruna\\Downloads\\stackoverflow-main\\stackoverflow-main\\StackOverflow.Repositories\\StackOverflow.Repositories.csproj"
             }
           }
         }

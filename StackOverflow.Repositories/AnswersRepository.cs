@@ -56,16 +56,7 @@ namespace StackOverflow.Repositories
             db.SaveChanges();
         }
 
-        //public void UpdateAnswerVotesCount(int a, int value);
-        //{
-        //   Answers ans =  db.Answers.Where(temp => temp.AnswerID == a ).FirstOrDefault();
-        //    if (ans != null)
-        //    {
-        //        ans.VotesCount += ValueTask;
-        //        db.SaveChanges();
-        //    }
-            
-        //}
+        
 
         public void UpdateAnswerVotesCount(int a,int uid, int value)
         {
