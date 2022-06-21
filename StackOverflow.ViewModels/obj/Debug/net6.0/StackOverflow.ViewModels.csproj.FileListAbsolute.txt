@@ -22,3 +22,5 @@ C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.Vie
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ViewModels\obj\Debug\net6.0\refint\StackOverflow.ViewModels.dll
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ViewModels\obj\Debug\net6.0\StackOverflow.ViewModels.pdb
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ViewModels\obj\Debug\net6.0\ref\StackOverflow.ViewModels.dll
+C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ViewModels\bin\Debug\net6.0\StackOverflow.ViewModels.runtimeconfig.json
+C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ViewModels\obj\Debug\net6.0\StackOverflow.ViewModels.genruntimeconfig.cache
