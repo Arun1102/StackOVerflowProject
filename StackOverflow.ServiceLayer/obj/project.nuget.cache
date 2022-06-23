@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LyCeFvYYbGU7TlKId8umokrei4N01W4vTEs/x8VXq8IR9LjlstCsMdBtKC2ZKrt2BTjUz9cDobRtF+7qeYOYIQ==",
+  "dgSpecHash": "2dlUDldQs4Jau66Y9BQ05KL/SZ5UPo9uZ7GFRBsNlOpl4LmkMdSKDyS+2wNaAAAMzO2pf2+gM5XfvR0fBv84wA==",
   "success": true,
   "projectFilePath": "C:\\Users\\aruna\\Downloads\\stackoverflow-main\\stackoverflow-main\\StackOverflow.ServiceLayer\\StackOverflow.ServiceLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aruna\\.nuget\\packages\\automapper\\7.0.1\\automapper.7.0.1.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -22,6 +23,7 @@
     "C:\\Users\\aruna\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\aruna\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\aruna\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []

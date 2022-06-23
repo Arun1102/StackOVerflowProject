@@ -34,3 +34,5 @@ C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.Ser
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ServiceLayer\obj\Debug\net6.0\ref\StackOverflow.ServiceLayer.dll
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ServiceLayer\bin\Debug\net6.0\StackOverflow.Repositories.dll
 C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ServiceLayer\bin\Debug\net6.0\StackOverflow.Repositories.pdb
+C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ServiceLayer\bin\Debug\net6.0\StackOverflow.ViewModels.dll
+C:\Users\aruna\Downloads\stackoverflow-main\stackoverflow-main\StackOverflow.ServiceLayer\bin\Debug\net6.0\StackOverflow.ViewModels.pdb
