@@ -12,6 +12,7 @@ namespace StackOverflow.Repositories
         void UpdateUsersPassword(Users u);
         void DeleteUsers(int uid);
         List<Users> GetUsers();
+        int GetLatestUsers();
         List<Users> GetUsersByEmailAndPassword(string email , string password);
         List<Users> GetUsersByEmail(string email);
         List<Users> GetUsersByUserID(int uid);
@@ -68,10 +69,15 @@ namespace StackOverflow.Repositories
 
         public List<Users> GetUsers()
         {
-            List<Users> ui = db.Users.ToList();
+            List<Users> ui = db.Users.Where(temp=> temp.IsAdmin == false ).ToList();
             return ui;
         }
 
+        public int GetLatestUsers()
+        {
+            int ui = db.Users.Select(temp => temp.UserID).Max();
+            return ui;
+        }
         public List<Users> GetUsersByEmailAndPassword(string email, string password)
         {
             List<Users> ui = db.Users.Where(temp => temp.Email == email && temp.PasswordHash == password).ToList();

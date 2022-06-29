@@ -11,6 +11,7 @@ namespace StackOverflow.Repositories
         void UpdateAnswers(Answers a);
         void DeleteAnswers(int a);
         void UpdateAnswerVotesCount(int a, int uid, int value);
+        List<Answers> GetAnswersByQuestionID(int a);
         List<Answers> GetAllAnswers();
         List<Answers> GetAnswersByAnswerID( int a);
     }
@@ -79,6 +80,12 @@ namespace StackOverflow.Repositories
         public List<Answers> GetAnswersByAnswerID(int a)
         {
             List<Answers> ans = db.Answers.Where(temp => temp.AnswerID == a).ToList();
+            return ans;
+        }
+
+        public List<Answers> GetAnswersByQuestionID(int a)
+        {
+            List <Answers> ans = db.Answers.Where (temp => temp.AnswerID == a).ToList();
             return ans;
         }
 
